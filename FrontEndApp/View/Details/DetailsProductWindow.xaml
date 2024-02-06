@@ -1,0 +1,33 @@
+﻿<Window x:Class="FrontEndApp.View.Details.DetailsProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FrontEndApp.View.Details"
+        mc:Ignorable="d"
+        Title="DetailsProductWindow" Height="500" Width="950" ResizeMode="CanMinimize">
+    <Grid Background="#008080">
+        <Image  x:Name="logo" HorizontalAlignment="Center" Height="100" VerticalAlignment="Top" Width="100" Source="/View/Images/photo_logo.png"/>
+        <TextBlock  FontSize="20" Foreground="GreenYellow" HorizontalAlignment="Center" Margin="0,105,0,0" TextWrapping="Wrap" Text="You are in the Details of Product section " VerticalAlignment="Top"/>
+        <Button x:Name="ReturnToProduct" Content="Return" Height="30" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="150" Click="Button_ReturnToProductStore" ToolTip="return to Product Store"/>
+        <DataGrid x:Name="DataGridDetailsProduct" IsReadOnly="True" ItemsSource="{Binding}" Background="#008050" RowBackground="#008050" Margin="10,148,10,10" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name"  Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="EAN" Binding="{Binding EAN}" />
+                <DataGridTextColumn Header="ProducerName" Binding="{Binding ProducerName}" />
+                <DataGridTextColumn Header="Category" Binding="{Binding Category}" />
+                <DataGridTextColumn Header="DefaultImage"  Binding="{Binding DefaultImage}" />
+                <DataGridTextColumn Header="Available"  Binding="{Binding Available}" />
+                <DataGridTextColumn Header="SKU"  Binding="{Binding SKU}" />
+                <DataGridTextColumn Header="ShippingCost"  Binding="{Binding ShippingCost}" />
+                <DataGridTextColumn Header="NettProductPrice"  Binding="{Binding NettProductPrice}" />
+                <DataGridTextColumn Header="NettProductPriceAfterDiscountForProductLogisticUnit"  Binding="{Binding NettProductPriceAfterDiscountForProductLogisticUnit}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+
+
+
+    </Grid>
+</Window>
